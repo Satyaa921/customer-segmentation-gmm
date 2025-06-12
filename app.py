@@ -30,3 +30,12 @@ if st.button("Predict Segment"):
         st.success(f"🎯 Predicted Segment: {segment}")
     except Exception as e:
         st.error(f"Error: {e}")
+
+segment_names = {
+    0: "High Income, Low Spenders",
+    1: "Young High Spenders",
+    2: "Mid-range Customers"
+}
+
+st.success(f"🎯 Predicted Segment: {prediction} ({segment_names.get(prediction, 'Unknown')})")
+
